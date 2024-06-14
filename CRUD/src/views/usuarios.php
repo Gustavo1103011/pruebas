@@ -8,21 +8,28 @@
 </head>
 <body>
     <header style="justify-content: center;">
-        <h1 >Biblioteca "María Morelos y Pavón"</h1>
+        <h1>Biblioteca "María Morelos y Pavón"</h1>
     </header>
     <div class="card">
         <h2 class="titulo-users">Registrar usuario</h2>
         <form action="usuarios_handler.php" method="post">
             <div>
-                <label style="color: white;" for="username">Usuario</label>
+                <label style="color: white;" for="username">Ingrese nombre de usuario</label>
                 <input class="inputs" type="text" id="username" name="username" required><br><br>
             </div>
             <div>
-                <label style="color: white;" for="password">Contraseña</label>
-                <input class="inputs" type="password" id="password" name="password" required><br><br>
+                <label style="color: white;" for="password">Ingrese contraseña</label>
+                <input class="inputs" type="text" id="password" name="password" required><br><br>
             </div>
             <button class="boton-login" type="submit">Registrar</button>
         </form>
     </div>
+
+    <script>
+        if (new URLSearchParams(window.location.search).has('success')) {
+            alert('Usuario agregado correctamente');
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    </script>
 </body>
 </html>
