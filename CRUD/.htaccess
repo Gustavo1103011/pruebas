@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule ^([a-z\-]+)$ index.php?e=$1 [NC]
+RewriteRule ^([a-z\-]+)/new$ index.php?e=$1&a=new [NC]
+
+RewriteRule ^([a-z\-]+)/(\d+)$ index.php?e=$1&id=$2&a=view [NC]
+RewriteRule ^([a-z\-]+)/(\d+)/(edit|delete|view)$ index.php?e=$1&id=$2&a=$3 [NC]

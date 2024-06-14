@@ -1,0 +1,241 @@
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ffffff;
+    color: white;
+}
+
+header{
+    padding: 0px 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em calc((100vw-1280px)/2);
+    background: #1e1e68;
+}
+
+header h1{
+    color: #ffffff;
+    align-items: center;
+}
+
+main{
+    width: 1280px;
+    margin:35px auto;
+    background: #ebecf0; 
+    padding: 20px;
+    box-sizing: border-box;
+    border-style: outset;
+    border-radius: 15px;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+}
+.card{
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    height: 450px;
+    background-color: #8990a0;
+    border-radius: 15px;
+    border-style: outset;
+}
+nav ul{
+    list-style: none ;
+    margin: 0;
+    padding:0;
+    display: flex;
+    gap: 5px;
+}
+
+table{
+    width: 100%;
+    border-collapse: separate;
+}
+table th,
+table td{
+    padding: 6px 10px;
+}
+table th{
+    background: #000;
+    text-align: center;
+}
+td{
+    text-align: center;
+}
+
+table tbody tr td{
+    background: #ffffff;
+    color: #000;
+}
+
+
+table td a{
+    text-decoration: none;  
+    color: rgb(205, 212, 0);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header a{
+    display: block;
+    font-size: 1.1em;
+    padding: 6px 20px;
+    border-radius: 5px;
+    background: #2c76d6;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.titulo{
+    color: rgb(227, 173, 10);
+    text-align: center;
+}
+
+
+form > div{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centro los elementos horizontalmente */
+}
+
+
+form > div > label {
+    width: 200px;
+    text-align: center; /* Centro el texto del label */
+    color: #000;
+}
+
+form > div > label + * {
+    width: 600px;
+    height: 30px;
+    padding: 6px 10px;
+    border: 1px solid #1b2152;
+    border-radius: 10px;
+    margin-top: 10px; /* Espacio entre el label y el input */
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 35px;
+    cursor: pointer;
+}
+
+.buttons button{
+    padding:8px 15px;
+    border-radius: 5px;
+    border: 1px solid #2e2929;
+    cursor: pointer;
+}
+
+button[type=submit]{
+    
+    background: #030303;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type=button]{
+    
+    font-size: 18px;
+    width: 100px;
+    height: 35px ;
+    padding: 5px 5px;
+    background:  rgb(227, 173, 10);
+    color: #000000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.boton-editar{
+    text-align: center;
+    width: 200px;
+    height: 70px;
+    font-size: 1.1em;
+    padding: 6px 20px;
+    border-radius: 5px;
+    background: #436446;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+button[type=button].boton-cancelar{
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    font-size: 1.1em;
+    padding: 6px 20px;
+    border-radius: 5px;
+    background: #ce0f0f;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+button[type=submit].boton-agregar{
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    font-size: 1.1em;
+    padding: 6px 20px;
+    border-radius: 5px;
+    background: #436446!important;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.boton-login{
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    font-size: 1.1em;
+    padding: 6px 20px;
+    border-radius: 5px;
+    background: #436446;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton-eliminar{
+    text-align: center;
+    width: 70px;
+    font-size: 1.1em;
+    padding: 6px 20px;
+    border-radius: 5px;
+    background: #ce0f28;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.acciones{
+    display: flex;
+    justify-content: space-around;
+    font-weight: 500;
+}
+
+label {
+    font-weight: 900;
+}
+
+.titulo-login{
+    color: #1e1e68;
+}
+.inputs{
+    width: 280px;
+}
