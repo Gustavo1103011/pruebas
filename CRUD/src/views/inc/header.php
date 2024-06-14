@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>Biblioteca "María Morelos y Pavón"</h1>
-        <button  type="button" onclick="location.href='/pruebas/CRUD/src/views/logout.php'">Logout</button>
+        <button class="boton-logout" type="button" onclick="location.href='/pruebas/CRUD/src/views/logout.php'">Logout</button>
     </header>
     <main >
         <!--Aqui va el contenido!-->

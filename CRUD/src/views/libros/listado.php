@@ -1,18 +1,26 @@
 <div class="header">
             <h2 class ="titulo">Listado de libros existentes</h2>
             <a href="/pruebas/CRUD/libros/new"> Agregar libro</a>
-        </div>    
             
+</div>    
+            
+<div>
+    <form class="form-buscar" action="" method="GET">
+        <input class="input-buscar" type="text" name="buscar" placeholder="Buscar">
+        <button class="boton-buscar" type="submit">Buscar</button>
+    </form>
+</div>
+
         <table >
             <thead >
                 <tr>
-                <th style="width: 5%;">ID</th>
-                <th style="width: 15%;">Nombre del libro</th>
-                <th style="width: 20%;">Autor</th>
-                <th style="width: 20%;">Editorial</th>
-                <th style="width: 10%;">Fecha publicación</th>
-                <th style="width: 10%;">Número de edición</th>
-                <th style="width: 20%;">Acciones</th>
+                <th class="ancho-columna">ID</th>
+                <th class="ancho-columna">Nombre del libro</th>
+                <th class="ancho-columna">Autor</th>
+                <th class="ancho-columna">Editorial</th>
+                <th class="ancho-columna">Fecha publicación</th>
+                <th class="ancho-columna">Número de edición</th>
+                <th class="ancho-columna">Acciones</th>
                 </tr>
                 <tbody>
                     <?php foreach($respuesta['libros'] as $c):?>
