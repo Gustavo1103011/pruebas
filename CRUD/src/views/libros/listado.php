@@ -17,7 +17,18 @@
                 <tbody>
                     <?php foreach($respuesta['libros'] as $c):?>
                     <tr style="height: 60px;">
-                        <td> <?php echo $c->getId();?></td>
+                    <td>
+                        <?php
+                        $id = $c->getId();
+                        if ($id < 10) {
+                            echo 'MMP-00' . $id;
+                        } elseif ($id < 100) {
+                            echo 'MMP-0' . $id;
+                        } else {
+                            echo 'MMP-' . $id;
+                        }
+                        ?>
+                    </td>
                         <td> <?php echo $c->getNombre();?></td>
                         <td> <?php echo $c->getAutor();?> </td>
                         <td> <?php echo $c->getEditorial();?> </td>

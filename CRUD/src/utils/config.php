@@ -5,7 +5,7 @@ define('MODELS', APP.'/models');
 define('VIEWS', APP.'/views');
 
 //datos de conexion
-define('DBHOST', 'localhost:3306');
+define('DBHOST', 'localhost:3307');
 define('DBCHARSET', 'utf8mb4');
 define('DBNAME', 'libros'); // Asegúrate de que esta base de datos exista
 define('DBUSER', 'root'); 

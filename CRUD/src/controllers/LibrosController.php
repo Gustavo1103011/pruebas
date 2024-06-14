@@ -9,10 +9,6 @@ class LibrosController {
         $libro = new LibrosModel();
         $listado = $libro->all();
 
-        // Si deseas debuggear, puedes usar var_dump o die()
-        // var_dump($listado);
-        // die();
-
         return [
             'view' => 'libros/listado.php',
             'libros' => $listado // Puedes pasar los libros al archivo de vista
