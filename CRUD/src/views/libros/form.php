@@ -22,6 +22,6 @@
     </div>
     <div class="buttons">
         <button class="boton-agregar" type="submit"><?php echo $respuesta['form']['button']; ?></button>
-        <button class="boton-cancelar" type="button" onclick="location.href='/pruebas/CRUD/libros'">Cancelar alta de libro</button>
+        <button class="boton-cancelar" type="button" onclick="location.href='/pruebas/CRUD/libros'">Cancelar</button>
     </div>
 </form>

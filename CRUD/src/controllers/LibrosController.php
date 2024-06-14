@@ -30,8 +30,8 @@ class LibrosController {
         return [
             'view' => 'libros/form.php',
             'form' => [
-                'title' => 'Crear libro',
-                'button' => 'Agregar',
+                'title' => 'Agregar libro',
+                'button' => 'Agregar libro',
                 'action' => '/pruebas/CRUD/libros/new'
             ]
             

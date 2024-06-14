@@ -30,7 +30,7 @@ class LoginController {
         return [
             'view' => 'libros/form.php',
             'form' => [
-                'title' => 'Crear libro',
+                'title' => 'Agregar libro',
                 'button' => 'Agregar',
                 'action' => '/pruebas/CRUD/libros/new'
             ]
