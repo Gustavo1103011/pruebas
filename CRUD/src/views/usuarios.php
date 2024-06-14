@@ -24,12 +24,5 @@
             <button class="boton-login" type="submit">Registrar</button>
         </form>
     </div>
-
-    <script>
-        if (new URLSearchParams(window.location.search).has('success')) {
-            alert('Usuario agregado correctamente');
-            window.history.replaceState({}, document.title, window.location.pathname);
-        }
-    </script>
 </body>
 </html>

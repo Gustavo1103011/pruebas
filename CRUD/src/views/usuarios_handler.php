@@ -12,6 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'username' => $_POST['username'], // Cambia a 'username'
         'password' => $_POST['password']  // Cambia a 'password'
     ]);
-    header('Location: /pruebas/CRUD/users?success=1');
+    header('Location: /pruebas/CRUD/users');
     exit();
 }

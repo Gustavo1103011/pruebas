@@ -12,17 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
 
-    // var_dump($username, $password);
-    // die();
-
     $userModel = new LoginModel();
     $user = $userModel->findByUsername($username);
-    //var_dump($username, $password);
-    //var_dump( $user['usuario']);
-    //die();
 
     // Verificar si las credenciales coinciden
-    if ($user['usuario'] == $username && $user['password'] == $password) {
+    if ($user && $user['usuario'] == $username && password_verify($password, $user['password'])) {
         // Autenticación exitosa, establecer la variable de sesión
         $_SESSION['usuario'] = $username;
         // Redirigir al usuario a la página principal
@@ -34,3 +28,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 }
+?>
