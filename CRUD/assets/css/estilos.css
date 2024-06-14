@@ -20,13 +20,14 @@ header h1{
 }
 
 main{
-    width: 1280px;
+    max-width: 1500px;
     margin:35px auto;
     background: #ebecf0; 
     padding: 20px;
     box-sizing: border-box;
     border-style: outset;
     border-radius: 15px;
+    overflow-x: auto;
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
 }
 .card{
@@ -51,17 +52,23 @@ nav ul{
 
 table{
     width: 100%;
+    max-width: 100%;
+    table-layout: auto;
     border-collapse: separate;
 }
 table th,
 table td{
     padding: 6px 10px;
+    max-width: 100%;
+    white-space: normal; 
+    overflow-wrap: break-word; 
 }
 table th{
     background: #000;
     text-align: center;
 }
 td{
+    max-width: 1000px;
     text-align: center;
 }
 
@@ -95,10 +102,12 @@ table td a{
 }
 
 .titulo{
-    color: rgb(227, 173, 10);
+    color: #ffb937;
     text-align: center;
+    text-shadow: 1px 1px 1px black;
+    -webkit-text-stroke: 1px  rgb(163, 125, 14);
+    font-size: 30px;
 }
-
 
 form > div{
     margin-bottom: 10px;
@@ -183,6 +192,21 @@ button[type=submit].boton-agregar{
     background: #436446!important;
     color: white;
 }
+
+button[type=submit].boton-buscar{
+    width: 100px;
+    height: 45px;
+    background: #3d3d3d!important;
+    color: white;
+}
+
+button[type=button].boton-logout{
+    width: 100px;
+    height: 45px;
+    background:#ffb937;
+    color: black;
+}
+
 .boton-login{
     width: 150px;
     height: 40px;
@@ -205,4 +229,47 @@ label {
 }
 .inputs{
     width: 280px;
+}
+.input-buscar{
+    width: 400px;
+    height: 45px;
+    border-radius: 5px;
+    padding: 0px 15px;
+}
+.form-buscar{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.ancho-columna{
+    width: 5%;
+}
+
+.ancho-columna:nth-child(2){
+    width: 15%;
+}
+.ancho-columna:nth-child(3){
+    width: 20%;
+}
+
+.ancho-columna:nth-child(4){
+    width: 20%;
+}
+
+.ancho-columna:nth-child(5){
+    width: 10%;
+}
+
+.ancho-columna:nth-child(6){
+    width: 10%;
+}
+
+.ancho-columna:nth-child(7){
+    width: 20%;
+}
+
+.alto-columna{
+    height: 70px;
 }

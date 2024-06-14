@@ -1,5 +1,5 @@
 <h2 class ="titulo"><?php echo $respuesta['form']['title']; ?> </h2>
-<form class="titulo" method="post" action="<?php echo $respuesta['form']['action'];?>" enctype="multipart/form-data">
+<form method="post" action="<?php echo $respuesta['form']['action'];?>" enctype="multipart/form-data">
     <div>
         <label for="nombre">Nombre del libro: </label> 
         <input type="text" name="nombre" id="nombre" placeholder="Nombre del libro" value="<?php echo isset($respuesta['form']['values']) ? $respuesta['form']['values']->getNombre() : ''; ?>" autocomplete="off" required>
