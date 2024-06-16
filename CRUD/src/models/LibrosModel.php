@@ -137,35 +137,25 @@ class LibrosModel{
     }
 
     public function search($query) {
-        $this->connect();
-    
-        // Verificamos si la búsqueda es estrictamente numérica
-        if (is_numeric($query)) {
-            // Búsqueda por ID exacta y otros campos usando LIKE
-            $stmt = $this->pdo->prepare('SELECT * FROM libros WHERE idlibros = :query OR nombre LIKE :likeQuery OR autor LIKE :likeQuery OR editorial LIKE :likeQuery OR fecha_p LIKE :likeQuery OR n_edicion LIKE :likeQuery');
-            $stmt->execute([
-                ':query' => $query,
-                ':likeQuery' => '%' . $query . '%'
-            ]);
-        } else {
-            // Búsqueda usando LIKE en todos los campos
-            $stmt = $this->pdo->prepare('SELECT * FROM libros WHERE nombre LIKE :query OR autor LIKE :query OR editorial LIKE :query OR fecha_p LIKE :query OR n_edicion LIKE :query');
-            $stmt->execute([':query' => '%' . $query . '%']);
-        }
-    
-        $datos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-        $retorno = [];
-        foreach($datos as $d){
-            $libro = new LibrosModel();
-            $libro->setId($d['idlibros']);
-            $libro->setNombre($d['nombre']);
-            $libro->setAutor($d['autor']);
-            $libro->setEditorial($d['editorial']);
-            $libro->setFecha($d['fecha_p']);
-            $libro->setEdicion($d['n_edicion']);
-            $retorno[] = $libro;
-        }
-        return $retorno;
-    }      
+    $this->connect();
+
+    $stmt = $this->pdo->prepare('SELECT * FROM libros WHERE idlibros LIKE :query OR nombre LIKE :query OR autor LIKE :query OR editorial LIKE :query OR fecha_p LIKE :query OR n_edicion LIKE :query');
+    $stmt->execute([':query' => '%' . $query . '%']);
+
+    $datos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $retorno = [];
+    foreach($datos as $d){
+        $libro = new LibrosModel();
+        $libro->setId($d['idlibros']);
+        $libro->setNombre($d['nombre']);
+        $libro->setAutor($d['autor']);
+        $libro->setEditorial($d['editorial']);
+        $libro->setFecha($d['fecha_p']);
+        $libro->setEdicion($d['n_edicion']);
+        $retorno[] = $libro;
+    }
+    return $retorno;
+}
+   
 }
