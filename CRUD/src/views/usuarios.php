@@ -22,6 +22,7 @@
                 <input class="inputs" type="text" id="password" name="password" required><br><br>
             </div>
             <button class="boton-login" type="submit">Registrar</button>
+            <button class="boton-cancelarUser" type="button" onclick="location.href='/pruebas/CRUD/login'">Cancelar</button>
         </form>
     </div>
 </body>

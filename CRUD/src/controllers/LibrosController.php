@@ -5,15 +5,15 @@ namespace App\Controllers;
 use App\Models\LibrosModel;
 
 class LibrosController {
-    public static function list() {
-        $libro = new LibrosModel();
-        $listado = $libro->all();
+    // public static function list() {
+    //     $libro = new LibrosModel();
+    //     $listado = $libro->all();
 
-        return [
-            'view' => 'libros/listado.php',
-            'libros' => $listado // Puedes pasar los libros al archivo de vista
-        ];
-    }
+    //     return [
+    //         'view' => 'libros/listado.php',
+    //         'libros' => $listado // Puedes pasar los libros al archivo de vista
+    //     ];
+    // }
 
     public static function new() {
         if($_SERVER ['REQUEST_METHOD'] == 'POST') {
@@ -43,10 +43,7 @@ class LibrosController {
             $libro = new LibrosModel();
             $libro ->update($_POST, $id);
             header('Location:/pruebas/CRUD/libros');
-            // die();
         }
-        // var_dump($actual);
-        // die();
         return [
             'view' => 'libros/form.php',
             'form' => [
@@ -66,4 +63,20 @@ class LibrosController {
         header("Location: /pruebas/CRUD/libros");
 
     }
+    public static function list() {
+        $libro = new LibrosModel();
+        $listado = [];
+    
+        if (isset($_GET['buscar'])) {
+            $query = $_GET['buscar'];
+            $listado = $libro->search($query);
+        } else {
+            $listado = $libro->all();
+        }
+    
+        return [
+            'view' => 'libros/listado.php',
+            'libros' => $listado
+        ];
+    } 
 }
