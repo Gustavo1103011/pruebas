@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/pruebas/CRUD/assets/css/estilos.css">
 </head>
 <body>
-    <header>
+    <header class="header2">
         <h1>Biblioteca "María Morelos y Pavón"</h1>
         <button class="boton-logout" type="button" onclick="location.href='/pruebas/CRUD/src/views/logout.php'">Logout</button>
     </header>
