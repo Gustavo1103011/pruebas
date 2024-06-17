@@ -62,7 +62,6 @@ table td a{
 .header2 {
     display: flex;
     align-items: center;
-    background: #1e1e68;
     color: white;
     padding: 0rem 1rem;
     height: 6.5rem;
@@ -82,8 +81,9 @@ table td a{
 }
 .card-listado,
 .card-formulario,
-.card {
-    border-radius: 15px;
+.card-login,
+.card-user {
+    border-radius: 30px;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
     overflow-x: auto;
 }
@@ -113,9 +113,6 @@ table td a{
     width: 40rem;
     height: 30rem;
     background-color: #f0f0f0;
-    box-shadow: 0 0 15px rgba(30, 30, 104, 0.1); 
-    border: 1px solid #1e1e68; 
-    border-radius: 3rem;
 }
 
 .card-user{
@@ -128,9 +125,6 @@ table td a{
     height: 35rem;
     background-color: #f0f0f0;
     color: #000;
-    box-shadow: 0 0 15px rgba(30, 30, 104, 0.1); 
-    border: 1px solid #1e1e68; 
-    border-radius: 3rem;
 }
 
 .header-listado{
@@ -146,20 +140,13 @@ table td a{
     -webkit-text-stroke: 1px  rgb(163, 125, 14);
 }
 
-.campos{
-    width: 100%;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centro los elementos horizontalmente */
-}
-
+.campos,
 .campo{
     width: 100%;
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centro los elementos horizontalmente */
+    align-items: center; 
 }
 
 .input-formulario {
@@ -168,7 +155,7 @@ table td a{
     padding: 6px 10px;
     border: 1px solid #1b2152;
     border-radius: 10px;
-    margin-top: 10px; /* Espacio entre el label y el input */
+    margin-top: 10px; 
 }
 
 .buttons{
@@ -180,40 +167,33 @@ table td a{
     cursor: pointer;
 }
 
-.boton-editar{
-    text-align: center;
-    width: 200px;
-    height: 70px;
+.boton-editar, 
+.boton-eliminar,
+.boton-agregar{
     padding: 6px 20px;
     border-radius: 5px;
-    background: #436446;
     color: white;
     border-style:outset;
+}
+
+.boton-editar{
+    background: #436446;
 }
 .boton-editar:hover{
     background: #436446a4;
 }
 .boton-eliminar{
-    width: 70px;
-    padding: 6px 20px;
-    border-radius: 5px;
-    background: #ce0f28;
-    color: white;
-    border-style:outset;
+    background: #7f101f;
 }
 .boton-eliminar:hover{
-    background: #ce0f29c3;
+    background: #7f101f8d;
 }
 .boton-agregar{
     display: block;
     font-size: 1.1em;
-    padding: 6px 20px;
-    border-radius: 5px;
     background: #2c76d6;
-    color: white;
     text-decoration: none;
     font-weight: bold;
-    border-style:outset;
 }
 .boton-agregar:hover{
     background: #2c76d6b5;
@@ -228,7 +208,7 @@ button[type=button] {
     text-align: center;
     color: white;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.4rem;
     padding: 6px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -246,18 +226,21 @@ button[type=submit].boton-buscar {
 }
 
 .boton-cancelar {
-    background: #ce0f0f;
+    background: #7f101f;
 }
 
 .boton-cancelar:hover {
-    background: #ce0f0f86;
+    background: #7f101f8d;
 }
 
 button[type=button].boton-cancelarUser{
     width: 150px;
     height: 40px;
-    background: #ce0f0f;
+    background: #7f101f;
     color: white;
+}
+button[type=button].boton-cancelarUser:hover {
+    background: #7f101f8d;
 }
 
 .label-login{
