@@ -1,7 +1,9 @@
-<div class="header">
-            <h2 class ="titulo">Listado de libros existentes</h2>
-            <a href="/pruebas/CRUD/libros/new"> Agregar libro</a>
-            
+<div class="card-listado">
+
+
+<div class="header-listado">
+    <h2 class ="titulo">Listado de libros existentes</h2>
+    <a class="boton-agregar" href="/pruebas/CRUD/libros/new"> Agregar libro</a> 
 </div>    
             
 <div>
@@ -51,3 +53,4 @@
                 </tbody>
             </thead>
         </table>
+</div>
