@@ -31,13 +31,14 @@ nav ul{
 }
 table{
     width: 100%;
-    border-collapse: collapse   ;
+    border-collapse:collapse;
+    border-spacing: 2px;
     border-radius: 10px;
-    overflow: hidden;
 }
 table th,
 table td{
     padding: 0.2rem 0.5rem;
+    border: 1px solid #1e1e68a1;
 }
 table th{
     background: #000;
@@ -96,7 +97,7 @@ table td a{
 }
 
 .card-formulario{
-    width: 60rem;
+    width: 50rem;
     margin: 3rem;
     padding: 2rem;
     background: #ffffff;
@@ -138,21 +139,6 @@ table td a{
     justify-content: space-between;
 }
 
-.btn-agregar{
-    display: block;
-    font-size: 1.1em;
-    padding: 6px 20px;
-    border-radius: 5px;
-    background: #2c76d6;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-
-}
-.btn-agregar:hover{
-    background: #2c76d6b5;
-}
-
 .titulo{
     color: #ffb937;
     text-align: center;
@@ -161,6 +147,14 @@ table td a{
 }
 
 .campos{
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centro los elementos horizontalmente */
+}
+
+.campo{
     width: 100%;
     margin-bottom: 10px;
     display: flex;
@@ -194,6 +188,7 @@ table td a{
     border-radius: 5px;
     background: #436446;
     color: white;
+    border-style:outset;
 }
 .boton-editar:hover{
     background: #436446a4;
@@ -204,10 +199,30 @@ table td a{
     border-radius: 5px;
     background: #ce0f28;
     color: white;
+    border-style:outset;
 }
 .boton-eliminar:hover{
     background: #ce0f29c3;
 }
+.boton-agregar{
+    display: block;
+    font-size: 1.1em;
+    padding: 6px 20px;
+    border-radius: 5px;
+    background: #2c76d6;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-style:outset;
+}
+.boton-agregar:hover{
+    background: #2c76d6b5;
+}
+
+.boton-registro{
+    color: #1e1e68 ;
+}
+
 button[type=submit],
 button[type=button] {
     text-align: center;
@@ -219,9 +234,8 @@ button[type=button] {
     cursor: pointer;
 }
 
-button[type=button].boton-cancelar,
-button[type=submit].boton-agregar,
-button[type=submit].boton-buscar {
+button[type=submit].boton-agregarAceptar,
+button[type=button].boton-cancelar {
     width: 200px;
     height: 50px;
 }
@@ -251,20 +265,13 @@ button[type=button].boton-cancelarUser{
     font-weight: bold;
 }
 
-.boton-agregar {
-    position: relative;      
-    top: 25%;
-    font-weight: bold;
-    padding: 10px 20px;    
-    background-color: #3773ff; 
-    color: rgb(255, 255, 255);           
-    border: none;           
-    border-radius: 4px;  
-    text-decoration: none;
+.boton-agregarAceptar {
+    background: #436446;
+    color: white;
 }
 
-.boton-agregar:hover {
-    background: #3773ff8b;
+.boton-agregarAceptar:hover {
+    background: #436446aa;
 }
 
 .boton-buscar {
@@ -284,6 +291,7 @@ button[type=button].boton-cancelarUser{
     color: black;           
     border: none;           
     border-radius: 4px;     
+    border-style:outset;
 }
 
 .boton-logout:hover {
@@ -306,7 +314,8 @@ button[type=button].boton-cancelarUser{
     font-weight: 500;
 }
 
-.titulo-login{
+.titulo-login,
+.titulo-users{
     color: #1e1e68;
 }
 .input-user{
@@ -325,7 +334,7 @@ button[type=button].boton-cancelarUser{
     width: 20rem;
     height: 2.8rem;
     border-radius: 5px;
-    padding: 0px 15px;
+    padding: 0px 10px;
     margin-bottom: 10px;
 }
 .form-buscar{

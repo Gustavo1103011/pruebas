@@ -27,7 +27,7 @@
                     <input class="input-login" type="password" id="password" name="password" required><br><br>
                 </div>
                 <button class="boton-login" type="submit">Ingresar</button><br><br>
-                <a href="/pruebas/CRUD/src/views/usuarios.php" >Registrarse</a>
+                <a class="boton-registro" href="/pruebas/CRUD/src/views/usuarios.php" >Registrarse</a>
             </form>
         </div>
     </main>      

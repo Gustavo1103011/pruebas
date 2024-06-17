@@ -36,6 +36,6 @@ if(isset($_SESSION['usuario'])) {
     include(VIEWS . '/inc/footer.php');
 } else {
     // Si el usuario no está autenticado, redirigir al formulario de inicio de sesión
-    header("Location: src/views/login.php");
+    header("Location: /pruebas/CRUD/src/views/login.php");
     exit();
 }
